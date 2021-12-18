@@ -1,0 +1,182 @@
+1.Program to find factorial of a number is given as below?
+
+package myproject1;
+
+public class Factorial 
+{
+	
+	public static int factorial(int n)
+	
+	{
+		int i=1;
+		int fact=1;
+		
+		for(i=1;i<=n;i++)
+		fact=fact*i;
+		return fact;
+											
+	}
+	
+
+	public static void main(String[] args)
+	{
+		
+		System.out.println(factorial(6));
+		System.out.println(factorial(25));
+		
+		
+
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+2.Program to write multiplication table of a number by taking input from the system?
+
+package myproject2;
+
+import java.util.Scanner;
+
+public class Multiplication
+{
+
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		int n;
+		System.out.println("enter the number");
+		n=obj.nextInt();
+		System.out.println("Multiplication table of "+n+":");
+		for(int i=1;i<=10;i++)
+			System.out.println(n+"x"+i+"="+n*i);
+		obj.close();
+		
+		
+		
+
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
+3.data types and it details
+
+DATA TYPE	DEFAULT VALUE	DEFAULT SIZE	DEFAULT RANGE
+byte		0		1byte		-128 to 127
+short		0		2byte		-32768 to 32767
+int		0		4byte		-2147483648 to 2147483647
+long		0L		8byte		-2^(64-1) to 2^(64-1)-1
+float		0.0f		4byte		-
+double		0.0d		8byte		-
+char		'\u0000'	2byte		all unicode char
+boolean		FALSE		1bit		true,false
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+4.program to write permutations and combimations??
+
+package myproject3;
+
+public class combinationPermtation
+{
+	public static int ncr(int n,int r)
+	{
+		int combination =1;
+	combination = fact(n)/(fact(n-r)*fact(r));
+	return combination;
+	}
+	
+public static int npr(int n,int r)
+{
+	int permutaion =1;
+permutaion= fact(n)/fact(r);
+return permutaion;
+}
+
+public static int fact(int n)
+{
+	int i=1;
+	int factorial=1;
+	for(i=1;i<=n;i++)
+	factorial=factorial*i;
+	return factorial;
+}
+	public static void main(String[] args)
+	{
+		System.out.println("Factorial : "+fact(6));
+		System.out.println("combination :"+ncr(3,2));
+		System.out.println("permuation : "+npr(8,5));
+		
+	}
+
+
+	
+	
+
+}
+----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
+5.examples of increment and decrement operators
+package myproject4;
+
+import java.util.Scanner;
+
+public class incrementNdDecrement {
+
+	public static void main(String[] args)
+	{
+	Scanner obj= new Scanner(System.in);
+	System.out.println("enter the number: " );
+		int c;
+		int a;
+		c=obj.nextInt();
+		a=c;
+		int b;
+		b=++a;
+	System.out.println("pre increment a:"+a);
+	System.out.println("pre increment b:"+b);
+		a=c;
+		 b=a++;
+ 	System.out.println("post increment a:"+a);
+		 System.out.println("post increment b:"+b);
+		 a=c;
+		 b=--a;
+		 System.out.println("pre decrement a:"+a);
+		 System.out.println("pre decrement b:"+b);
+		 a=c;
+		 b=a--;
+	System.out.println("post decrement a:"+a);
+ 	System.out.println("post decrement b:"+b);
+		 obj.close();
+		 
+	
+}
+	
+
+}
+----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+6.Write the concepts discussed about strings in the class??
+In Java, string is basically an object that represents sequence of char values.
+Strings in Java are Objects that are backed internally by a char array.
+Since arrays are immutable(cannot grow), Strings are immutable as well. Whenever a change to a String is made, an entirely new String is created and refernce is
+ pointed to this new string.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+7. Research and write what is String pool in java??
+
+String pool is nothing but a storage area in Java heap where string literals stores. It is also known as String Intern Pool or String Constant Pool. It is just like object allocation. 
+By default, it is empty and privately maintained by the Java String class. Whenever we create a string the string object occupies some space in the heap memory. Creating a number of 
+strings may increase the cost and memory too which may reduce the performance also.
+
+The JVM performs some steps during the initialization of string literals that increase the performance and decrease the memory load. To decrease the number of String objects
+ created in the JVM the String class keeps a pool of strings.
+
+When we create a string literal, the JVM first check that literal in the String pool. If the literal is already present in the pool, it returns a reference to the pooled instance. 
+If the literal is not present in the pool, a new String object takes place in the String pool.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------
+
